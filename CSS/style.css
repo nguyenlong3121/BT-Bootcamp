@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+}
+html,body{
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    text-align: left;
+    color: #212529;
+    font-weight: 400;
+    line-height: 1.5;
+}
+ul{
+    list-style: none;
+}
+a a:hover{
+    text-decoration: none;
+}
+h1{
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+.navbar{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+.navbar .navbar-brand{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    color: #fff;
+}
+.navbar-brand{
+    display:inline-block;
+    white-space: nowrap;
+    
+    
+}
+.navbar-brand i{
+    color: #009f4d;
+    
+
+}
+
+.navbar-brand .slogan{
+    text-transform: none;
+    display: block;
+    font-size: 14px;
+    padding-left: 46px;
+    font-weight: 600;
+    opacity: .9;
+}
+.dropdown-menu{
+    transform: translateX(-50px);
+    display: none;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #eee;
+}
+.show{
+    display: block;
+}
+.dropdown-menu::before{
+    content: "";
+    background-color: #fff;
+    border:1px solid #eee;
+    
+    width: 14px;
+    height: 14px;
+    display: block;
+    border-right: none;
+    border-bottom: none;
+    transform: translateX(-4px) rotateZ(45deg) ;
+    position: absolute;
+    top: -7px;
+    left: 49%;
+    z-index: 1001;
+}
+.nav-search{
+    cursor: pointer;
+}
+.btn-material{
+    line-height: 45px;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    background: #009f4d;
+    outline: 0;
+    transform-origin: 50%;
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-material i{
+    color: #fff;
+}
+.nav-search .icon-matrial-search{
+    color: #FFF;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+/* CLOSE ICON */
+.headr-search .icon-close{
+    position: absolute;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 70px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out; 
+}
+/* SEARCH INPUT */
+.search-input{
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    margin-top: -40px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(40px, 0);
+    transition: all 0.3s ease-in-out;
+    width: 88%;
+}
+.search-input input{
+    color: #fff !important;
+    font-size: 54px;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    outline: 0;
+    font-weight: 200;
+    height: 100vh;
+    width: 100%;
+}
+body .search-active{
+    overflow: hidden;
+}
+body .search-active .search-input{
+    opacity: 1;
+    transform: none;
+    pointer-events: all;
+}
+body .search-active .icon-close{
+    opacity: 1;
+    transform: rotate(-90deg)
+}
+body .search-active .nav-search{
+    cursor: default;
+}
+body .search-active .nav-search .btn-material{
+    transform: scale(70);
+
+}
+body .search-active .nav-search .icon-material-search{
+    opacity: 0;
+}
